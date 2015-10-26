@@ -12,8 +12,11 @@ gem 'news_service', path: './news_service'
 
 group :development, :test do
   gem 'byebug'
+  gem 'pry-rails'
+  gem 'tapp'
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
+  gem 'view_source_map'
+  gem 'web-console'
 end
