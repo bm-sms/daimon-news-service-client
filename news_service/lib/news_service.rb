@@ -1,7 +1,4 @@
-require 'active_record'
-
-require 'news_service/version'
-require 'news_service/post'
+require "news_service/engine"
 
 module NewsService
   cattr_accessor :service_url
