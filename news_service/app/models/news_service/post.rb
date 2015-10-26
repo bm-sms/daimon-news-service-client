@@ -5,23 +5,24 @@ class NewsService::Post
 
   class << self
     def all
-      response = HTTPClient.get(resource_url)
-      data = JSON.parse(response.body)
-
-      data.map {|attrs| new(attrs) }
+      fetch_resource(resource_url)
     end
 
     def find(id)
-      response = HTTPClient.get([resource_url, id].join('/'))
-      attrs = JSON.parse(response.body)
-
-      new(attrs)
+      fetch_resource([resource_url, id].join('/'))
     end
 
     private
 
     def resource_url
       URI.join(NewsService.service_url, ['sites', NewsService.site_token, 'posts'].join('/'))
+    end
+
+    def fetch_resource(url)
+      response = HTTPClient.get(url)
+      data = JSON.parse(response.body)
+
+      data.is_a?(Array) ? data.map {|attrs| new(attrs) } : new(data)
     end
   end
 end
