@@ -6,6 +6,7 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'sass-rails'
 gem 'uglifier'
+gem 'httpclient'
 
 group :development, :test do
   gem 'byebug'
