@@ -1,4 +1,4 @@
-class NewsService::PostsController < ApplicationController
+class NewsService::PostsController < NewsService::ApplicationController
   def index
     @posts = NewsService::Post.all
   end
