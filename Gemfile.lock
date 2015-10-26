@@ -2,6 +2,7 @@ PATH
   remote: ./news_service
   specs:
     news_service (0.0.1)
+      httpclient (>= 2.6.0)
       rails (~> 4.2.4)
 
 GEM
@@ -142,7 +143,6 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  httpclient
   jquery-rails
   news_service!
   pg

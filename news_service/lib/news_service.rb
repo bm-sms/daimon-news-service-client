@@ -1,4 +1,5 @@
 require "news_service/engine"
+require "httpclient"
 
 module NewsService
   cattr_accessor :service_url

@@ -6,7 +6,6 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'sass-rails'
 gem 'uglifier'
-gem 'httpclient'
 
 gem 'news_service', path: './news_service'
 
