@@ -13,7 +13,7 @@ class NewsService::Post < NewsService::Base
       response = HTTPClient.get([resource_url, id].join('/'))
       attrs = JSON.parse(response.body)
 
-      new(attrs['post'])
+      new(attrs)
     end
 
     private
