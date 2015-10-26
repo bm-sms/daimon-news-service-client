@@ -2,4 +2,7 @@
   <%= raw @post.as_html %>
 </div>
 
+<%= render 'popular', posts: @popular_posts %>
+<%= render 'new_arrival', posts: @new_arrival_posts %>
+
 <%= link_to 'Back', root_path %>

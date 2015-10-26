@@ -5,3 +5,6 @@
     <li><%= link_to post.title, post_path(post.id) %>
   <% end %>
 </ul>
+
+<%= render 'popular', posts: @popular_posts %>
+<%= render 'new_arrival', posts: @new_arrival_posts %>

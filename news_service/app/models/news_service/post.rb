@@ -8,6 +8,14 @@ class NewsService::Post
       fetch_resource(resource_url)
     end
 
+    def new_arrival
+      all # XXX Implement API
+    end
+
+    def popular
+      all # XXX Implement API
+    end
+
     def find(id)
       fetch_resource([resource_url, id].join('/'))
     end
