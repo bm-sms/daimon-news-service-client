@@ -9,6 +9,13 @@ class NewsClient::Post < NewsClient::Base
       data.map {|attrs| new(attrs) }
     end
 
+    def find(id)
+      response = HTTPClient.get([resource_url, id].join('/'))
+      attrs = JSON.parse(response.body)
+
+      new(attrs)
+    end
+
     private
 
     def resource_url
