@@ -1,6 +1,10 @@
-class NewsService::Base
-  include ActiveModel::Model
+require 'active_record'
 
+require 'news_service/version'
+require 'news_service/models/base'
+require 'news_service/models/post'
+
+module NewsService
   cattr_accessor :service_url
   cattr_accessor :site_token # XXX ひとまず `Site#id` を設定する
 

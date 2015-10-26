@@ -19,7 +19,7 @@ class NewsService::Post < NewsService::Base
     private
 
     def resource_url
-      URI.join(service_url, ['sites', site_token, 'posts'].join('/'))
+      URI.join(NewsService.service_url, ['sites', NewsService.site_token, 'posts'].join('/'))
     end
   end
 end
