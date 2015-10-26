@@ -1,4 +1,6 @@
-class NewsService::Post < NewsService::Base
+class NewsService::Post
+  include ActiveModel::Model
+
   attr_accessor :id, :title, :body, :as_html, :created_at, :updated_at
 
   class << self

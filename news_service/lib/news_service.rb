@@ -1,8 +1,7 @@
 require 'active_record'
 
 require 'news_service/version'
-require 'news_service/models/base'
-require 'news_service/models/post'
+require 'news_service/post'
 
 module NewsService
   cattr_accessor :service_url
