@@ -1,5 +1,5 @@
 class NewsService::Post < NewsService::Base
-  attr_accessor :id, :title, :body, :created_at, :updated_at
+  attr_accessor :id, :title, :body, :as_html, :created_at, :updated_at
 
   class << self
     def all
