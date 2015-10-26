@@ -1,4 +1,4 @@
-class NewsClient::Post < NewsClient::Base
+class NewsService::Post < NewsService::Base
   attr_accessor :id, :title, :body, :created_at, :updated_at
 
   class << self

@@ -1,4 +1,4 @@
-class NewsClient::Base
+class NewsService::Base
   include ActiveModel::Model
 
   cattr_accessor :service_url

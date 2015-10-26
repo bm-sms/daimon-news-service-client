@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
   def index
-    @posts = NewsClient::Post.all
+    @posts = NewsService::Post.all
   end
 
   def show
-    @post = NewsClient::Post.find(params[:id])
+    @post = NewsService::Post.find(params[:id])
   end
 end
