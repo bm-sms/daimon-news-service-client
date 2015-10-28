@@ -1,5 +1,5 @@
 <ul>
   <% posts.each do |post| %>
-    <li><%= link_to post.title, post_path(post.id) %></li>
+    <li><%= render_post_as_small_row post %></li>
   <% end %>
 </ul>
