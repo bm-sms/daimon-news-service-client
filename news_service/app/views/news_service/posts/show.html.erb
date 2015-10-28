@@ -1,8 +1,15 @@
-<div class="post-from-service">
-  <%= raw @post.as_html %>
-</div>
+<main>
+  <div class="post-from-service">
+    <%= render_post_detail @post %>
+  </div>
+</main>
 
-<%= render 'popular', posts: @popular_posts %>
-<%= render 'new_arrival', posts: @new_arrival_posts %>
+<aside>
+  <h3>人気記事</h3>
+  <%= render_posts_as_small_list @popular_posts %>
+
+  <h3>新着記事</h3>
+  <%= render_posts_as_small_list @new_arrival_posts %>
+</aside>
 
 <%= link_to 'Back', root_path %>
