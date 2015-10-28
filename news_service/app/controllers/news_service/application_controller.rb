@@ -1,5 +1,5 @@
 module NewsService
-  class ApplicationController < ActionController::Base
+  class ApplicationController < parent_controller[]
     private
 
     def detect_layout
