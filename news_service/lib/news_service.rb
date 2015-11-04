@@ -11,16 +11,6 @@ module NewsService
     def configure
       yield self
     end
-
-    def controller(name, &block)
-      controller_name = "#{name}_controller"
-
-      require_dependency Engine.root.join('app/controllers/news_service', controller_name)
-
-      controller_class = const_get(controller_name.camelize)
-
-      controller_class.prepend Module.new(&block)
-    end
   end
 
   configure do |config|
