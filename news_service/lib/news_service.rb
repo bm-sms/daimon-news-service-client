@@ -6,6 +6,7 @@ module NewsService
   cattr_accessor :service_url
   cattr_accessor :site_token # XXX ひとまず `Site#id` を設定する
   cattr_accessor :parent_controller
+  cattr_accessor :detect_layout_proc
 
   class << self
     def configure
@@ -25,5 +26,6 @@ module NewsService
         ActionController::Base
       end
     }
+    config.detect_layout_proc = ->(controller) { }
   end
 end
