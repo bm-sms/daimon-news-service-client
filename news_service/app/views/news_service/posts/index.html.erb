@@ -1,0 +1,11 @@
+<%= content_for(:title, page.title) %>
+
+<h1><%= content_for(:title) %></h1>
+
+<ul>
+  <% page.posts.each do |post| %>
+    <li>
+      <%= link_to post.title, post_path(post.id) %>
+    </li>
+  <% end %>
+</ul>

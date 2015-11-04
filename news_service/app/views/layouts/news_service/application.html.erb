@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>NewsService</title>
+  <meta charset="utf-8">
+  <%# TODO サイト名を含められるようにする %>
+  <title><%= content_for(:title) %></title>
   <%= stylesheet_link_tag    "news_service/application", media: "all" %>
   <%= javascript_include_tag "news_service/application" %>
   <%= csrf_meta_tags %>
+  <%# TODO OGP も入れたいはず…！ %>
 </head>
 <body>
 
