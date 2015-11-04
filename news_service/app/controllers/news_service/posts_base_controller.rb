@@ -7,16 +7,26 @@ class NewsService::PostsBaseController < NewsService::ApplicationController
   def index
     # TODO ページング
 
+    @current_page = NewsService::PostPage::Index.new(NewsService::Post.all)
+
     render locals: {
-      page: NewsService::PostPage::Index.new(NewsService::Post.all)
+      page: @current_page
     }
   end
 
   def show
     post = NewsService::Post.find(params[:id])
+    @current_page = NewsService::PostPage::Show.new(post)
 
     render locals: {
-      page: NewsService::PostPage::Show.new(post)
+      page: @current_page
     }
   end
+
+  private
+
+  def current_page
+    @current_page
+  end
+  helper_method :current_page
 end
