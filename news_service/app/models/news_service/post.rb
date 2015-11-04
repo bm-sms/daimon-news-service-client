@@ -3,8 +3,6 @@ class NewsService::Post
 
   attr_accessor :id, :title, :body, :as_html, :created_at, :updated_at
 
-  # NOTE `as_html` はサーバから取得するのではなく、クライアント側で組み立てた方が扱いが楽かもしれない
-
   class << self
     def all
       fetch_resource(resource_url)
