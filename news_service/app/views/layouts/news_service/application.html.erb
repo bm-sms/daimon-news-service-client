@@ -6,7 +6,7 @@
   <%= stylesheet_link_tag    "news_service/application", media: "all" %>
   <%= javascript_include_tag "news_service/application" %>
   <%= csrf_meta_tags %>
-  <%# TODO OGP も入れたいはず…！ %>
+  <%# NOTE OGP などのメタタグを埋め込む際は、`current_page` から必要な情報を取得する %>
 </head>
 <body>
 
