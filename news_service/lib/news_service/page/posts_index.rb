@@ -1,8 +1,8 @@
-require_dependency 'news_service/post_page/base'
+require_dependency 'news_service/page/base'
 
 module NewsService
-  module PostPage
-    class Index < Base
+  module Page
+    class PostsIndex < Base
       attr_reader :posts
 
       def initialize(posts)

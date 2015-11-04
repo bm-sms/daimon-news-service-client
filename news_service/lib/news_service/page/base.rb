@@ -1,5 +1,5 @@
 module NewsService
-  module PostPage
+  module Page
     class Base
       # NOTE ユーザ定義のクラスを受け取るようにするとカスタマイズが容易なのでは…？
 
