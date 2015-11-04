@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title><%= content_for(:title) %></title>
+  <title><%= current_page.page_title %></title>
   <%= stylesheet_link_tag    "news_service/application", media: "all" %>
   <%= javascript_include_tag "news_service/application" %>
   <%= csrf_meta_tags %>
