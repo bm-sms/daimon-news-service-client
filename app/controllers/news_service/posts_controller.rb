@@ -1,3 +1,7 @@
 NewsService.controller(:posts) do
-  # Put your code here
+  def index
+    super
+
+    @new_arrival_posts = NewsService::Post.all.take(2)
+  end
 end
