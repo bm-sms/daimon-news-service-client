@@ -1,0 +1,11 @@
+<h1><%= page.title %></h1>
+
+<%= render 'news_service/posts/long_collection', posts: page.posts %>
+
+<%# TODO 新着かどうかというのは画面によって異なりそうなので、ここはコントローラでカスタマイズできるのがよさそう %>
+
+<h2>新着記事</h2>
+<%= render 'news_service/posts/short_collection', posts: page.posts %>
+
+<h2>人気記事</h2>
+<%= render 'news_service/posts/short_collection', posts: page.posts %>
